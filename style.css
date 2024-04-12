@@ -9,7 +9,8 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1fr 0.3fr;
+    grid-template-rows: 0.1fr 1fr 0.2fr;
+    background-color: pink;
 }
 
 .header{
@@ -19,10 +20,23 @@
 
 .maincontent{
     grid-area: 2,1,3,2;
-    background-color: black;
+}
+
+.maincontent::before{
+    content: "";
+    background-image: url(pink\ toy.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 1;
 }
 
 footer{
     grid-area: 3,1,4,2;
-    background-color: peachpuff;
+    background-color: lightcoral;
+    z-index: 2;
 }
